@@ -17,8 +17,6 @@ action = ActionChains(driver) #creates an action chain object
 
 action.move_to_element(link).perform()  # Moves the cursor to the desired link
 
-
-time.sleep(5)
 link.click() #Clicks the link with the "A/B Testing" text
 
 time.sleep(5)
