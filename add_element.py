@@ -1,7 +1,6 @@
 """This is selenium performing the add and remove functionality on the url https://the-internet.herokuapp.com/"""
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 import time
 
