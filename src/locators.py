@@ -39,3 +39,9 @@ class FileUploadPageLocators:
     FILE_INPUT = (By.ID, "file-upload")  # Input field to upload a file
     UPLOAD_BUTTON = (By.ID, "file-submit")  # Button to submit the upload
     UPLOAD_SUCCESS_TEXT = (By.TAG_NAME, "h3")  # Text displayed after upload
+
+class Loc:
+    AddRemove = AddRemoveElementsPageLocators
+    Checkboxes = CheckboxesPageLocators
+    ContextMenu = ContextMenuPageLocators
+    Dropdown = DropdownPageLocators
