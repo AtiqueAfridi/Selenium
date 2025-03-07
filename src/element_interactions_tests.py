@@ -4,10 +4,8 @@ from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import Select
 
-from src.locators import AddRemoveElementsPageLocators as Loc
-from src.locators import CheckboxesPageLocators as Loc
-from src.locators import ContextMenuPageLocators as Loc
-from src.locators import DropdownPageLocators as Loc
+from src.locators import Loc
+
 
 def test_add_remove_elements(driver: WebDriver) -> bool:
     try:
