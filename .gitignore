@@ -1,2 +1,13 @@
 LICENSE.chromedriver
 LICENSE
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore downloaded files
+downloads/
+
+# Ignore virtual environment
+venv/
