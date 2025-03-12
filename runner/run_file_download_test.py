@@ -3,14 +3,16 @@ from src.utilities import setup_driver, teardown_driver
 
 def run_file_download_test():
     driver = setup_driver()
+    target_filename = "hello.rtf"  # Change this to the file you want to download
+
     try:
         print("\n Running File Download Test...")
-        result = test_file_download(driver)
-        
+        result = test_file_download(driver, target_filename)
+
         if result:
-            print("File Download Test Passed")
+            print(f"File Download Test Passed for {target_filename}")
         else:
-            print("File Download Test Failed")
+            print(f"File Download Test Failed for {target_filename}")
 
     finally:
         teardown_driver(driver)

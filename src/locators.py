@@ -17,7 +17,8 @@ class DragAndDropPageLocators:
     TARGET = (By.ID, "column-b")
 
 class DropdownPageLocators:
-    DROPDOWN = (By.ID, "dropdown")
+    DROPDOWN_MENU  = (By.ID, "dropdown")
+    OPTION_2 = (By.XPATH, "//option[@value='2']")  # Locator for "Option 2"
 
 class BasicAuthPageLocators:
     SUCCESS_MESSAGE = (By.XPATH, "//div[@class='example']/p")
@@ -31,17 +32,44 @@ class FormAuthPageLocators:
     LOGIN_BUTTON = (By.XPATH, "//button[@type='submit']")
     SUCCESS_MESSAGE = (By.XPATH, "//div[contains(@class, 'flash success')]")
     ERROR_MESSAGE = (By.XPATH, "//div[contains(@class, 'flash error')]")
+    LOGOUT_BUTTON = (By.XPATH, "//a[@href='/logout']")  # Locator for Logout Button
+
+class ForgotPasswordPageLocators:
+    EMAIL_INPUT = (By.ID, "email")
+    RETRIEVE_BUTTON = (By.ID, "form_submit")
+    ERROR_MESSAGE = (By.TAG_NAME, "h1")  # Locator for "Internal Server Error" message
 
 class FileDownloadPageLocators:
-    BILLIE_JPG_LINK = (By.XPATH, "//a[text()='billie.jpg']")
+    FILE_LINKS = (By.XPATH, "//div[@class='example']//a")  # Selects all file links
 
 class FileUploadPageLocators:
+    """Locators for the File Upload Page."""
     FILE_INPUT = (By.ID, "file-upload")  # Input field to upload a file
     UPLOAD_BUTTON = (By.ID, "file-submit")  # Button to submit the upload
     UPLOAD_SUCCESS_TEXT = (By.TAG_NAME, "h3")  # Text displayed after upload
 
+    # Dynamic File Name (To be Set Before Running the Test)
+    FILE_TO_UPLOAD = "gg icon.png"  # Default value, can be modified before the test runs
+
+class EntryAdPageLocators:
+    """Locators for Entry Ad Page."""
+    MODAL = (By.ID, "modal")  # The popup modal
+    MODAL_CLOSE_BUTTON = (By.XPATH, "//div[@class='modal-footer']/p") 
+
+class PopupLocators:
+    """Locators for handling popups (Save Password & Change Password)."""
+    SAVE_PASSWORD_POPUP = (By.XPATH, "//div[contains(text(),'Save Password')]")
+    NEVER_SAVE_BUTTON = (By.XPATH, "//button[text()='Never']")
+    CHANGE_PASSWORD_WARNING = (By.XPATH, "//button[text()='OK']")  # Locator for Password Change Warning
+
+#  Ensure `Loc` includes all page locators
 class Loc:
     AddRemove = AddRemoveElementsPageLocators
     Checkboxes = CheckboxesPageLocators
     ContextMenu = ContextMenuPageLocators
     Dropdown = DropdownPageLocators
+    FileUpload = FileUploadPageLocators
+    FormAuth = FormAuthPageLocators
+    ForgotPassword = ForgotPasswordPageLocators  # Added Forgot Password
+    EntryAd = EntryAdPageLocators
+    Popup = PopupLocators  # Added Popup handling
