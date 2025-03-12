@@ -1,7 +1,1 @@
-file run --> then back it and run nxt file 
-
-then run two sep files in diff tabs
-
-for rest new bhrome instance and run file with out previous being closed
-
-do not hard code the elements rather make a separate file and import them where u want them to use
+MS graph (How to access email via python)

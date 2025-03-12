@@ -1,16 +1,21 @@
 from src.file_upload_test import test_file_upload
 from src.utilities import setup_driver, teardown_driver
+from src.locators import FileUploadPageLocators as Loc
 
 def run_file_upload_test():
+    """
+    Executes the file upload test using the filename defined in FileUploadPageLocators.
+    """
     driver = setup_driver()
+
     try:
-        print("\nRunning File Upload Test...")
+        print(f"\n Running File Upload Test for: {Loc.FILE_TO_UPLOAD}")
         result = test_file_upload(driver)
 
         if result:
-            print("File Upload Test Passed")
+            print(f"File Upload Test Passed for {Loc.FILE_TO_UPLOAD}")
         else:
-            print("File Upload Test Failed")
+            print(f"File Upload Test Failed for {Loc.FILE_TO_UPLOAD}")
 
     finally:
         teardown_driver(driver)
