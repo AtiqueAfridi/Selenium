@@ -1,7 +1,14 @@
-file run --> then back it and run nxt file 
+
+file run then back it and run nxt file 
 
 then run two sep files in diff tabs
 
 for rest new bhrome instance and run file with out previous being closed
 
 do not hard code the elements rather make a separate file and import them where u want them to use
+open the new tab and the new windows using mouse controls rather than direct url.
+
+open all tabs wiwthout doing anything
+
+randomly perform activities  and then close them in the same sequences as used to perform the activities 
+
