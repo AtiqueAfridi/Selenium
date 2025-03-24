@@ -2,9 +2,12 @@ from src.form_auth_test import test_form_authentication
 from src.utilities import setup_driver, teardown_driver
 
 def run_form_auth_test():
+    """
+    Executes the Form Authentication test.
+    """
     driver = setup_driver()
     try:
-        print("\n🔹 Running Form Authentication Test...")
+        print("\nRunning Form Authentication Test...")
         result = test_form_authentication(driver)
         
         if result:
