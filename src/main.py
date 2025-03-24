@@ -9,6 +9,7 @@ from src.locators import Loc
 from src.config import AuthConfig, PAGE_URLS
 import time
 
+
 def open_pages_in_tabs(driver):
     """Opens specific pages in new tabs and stores their handles."""
     print("Opening pages in new tabs...")
@@ -80,9 +81,23 @@ def perform_action(driver, page_name):
         driver.find_element(*Loc.ContextMenu.HOT_SPOT).click()
         print("✅ Right-clicked on Context Menu hotspot.")
 
-    elif page_name == "Digest Authentication":
+    if page_name == "Digest Authentication":
         driver.get(PAGE_URLS["digest_auth"])
-        print("✅ Opened Digest Authentication.")
+
+        try:
+            # Handle authentication popup
+            alert = WebDriverWait(driver, 5).until(EC.alert_is_present())
+            alert.send_keys(AuthConfig.DIGEST_AUTH_USERNAME + Keys.TAB + AuthConfig.DIGEST_AUTH_PASSWORD)
+            alert.accept()
+            print("✅ Successfully authenticated via Digest Authentication.")
+        except:
+            print("⚠️ No authentication popup appeared.")
+
+    # elif page_name == "Digest Authentication":
+    #     digest_auth_url = f"https://{AuthConfig.DIGEST_AUTH_CREDENTIALS}@{PAGE_URLS['digest_auth']}"
+    #     driver.get(digest_auth_url)  # ✅ Now passing credentials in URL
+    #     print("✅ Successfully authenticated via Digest Authentication.")
+        
 
     elif page_name == "File Upload":
         try:
@@ -146,5 +161,5 @@ def main(random_execution=True):
     teardown_driver(driver)
 
 if __name__ == "__main__":
-    random_execution = True  # Change to False for sequential execution
+    random_execution = False  # Change to False for sequential execution
     main(random_execution)

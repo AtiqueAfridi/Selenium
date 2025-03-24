@@ -25,3 +25,4 @@ PAGE_URLS = {
 class AuthConfig:
     FORM_AUTH_USERNAME = "tomsmith"
     FORM_AUTH_PASSWORD = "SuperSecretPassword!"
+    DIGEST_AUTH_CREDENTIALS = "admin:admin"
