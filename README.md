@@ -22,7 +22,7 @@ Selenium/
 │── src/
 │   ├── main.py             # Main script to execute the automation
 │   ├── locators.py         # Stores all element locators
-│   ├── config.py           # Configuration settings & credentials
+│   ├── config.py           # Configuration settings & Credentials
 │   ├── utilities.py        # Helper functions for setup & teardown
 │   ├── authentication_test.py  # Authentication handling
 │── downloads/              # Folder where downloaded files are stored
@@ -112,9 +112,8 @@ This project is **open-source** and available under the **MIT License**.
 ---
 
 ## **📞 Need Help?**
-📧 Email: `atique@example.com`  
-🐍 Python Community: [Python Discord](https://discord.gg/python)  
-🚀 Selenium Docs: [Read More](https://www.selenium.dev/documentation/)  
+📧 Email: `atiqueafridi10@gmail.com`  
+ 
 
 ---
 
