@@ -26,4 +26,7 @@ PAGE_URLS = {
 class AuthConfig:
     FORM_AUTH_USERNAME = "tomsmith"
     FORM_AUTH_PASSWORD = "SuperSecretPassword!"
-    DIGEST_AUTH_CREDENTIALS = "admin:admin"
+    
+    # ✅ Add Digest Authentication Credentials
+    DIGEST_AUTH_USERNAME = "admin"
+    DIGEST_AUTH_PASSWORD = "admin"
