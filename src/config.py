@@ -20,6 +20,7 @@ PAGE_URLS = {
     "file_upload": f"{BASE_URL}/upload",
     "entry_ad": f"{BASE_URL}/entry_ad",
     "forgot_password": f"{BASE_URL}/forgot_password",
+    "digest_auth": f"{BASE_URL}/digest_auth", 
 }
 
 class AuthConfig:

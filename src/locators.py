@@ -57,6 +57,12 @@ class PopupLocators:
 
 # Ensure `Loc` includes all page locators
 
+class ForgotPasswordPageLocators:
+    EMAIL_INPUT = (By.ID, "email")
+    RETRIEVE_BUTTON = (By.ID, "form_submit")
+    ERROR_MESSAGE = (By.ID, "content")
+
+
 class Loc:
     AddRemove = AddRemoveElementsPageLocators
     Checkboxes = CheckboxesPageLocators

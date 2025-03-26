@@ -12,3 +12,5 @@ open all tabs wiwthout doing anything
 
 randomly perform activities  and then close them in the same sequences as used to perform the activities 
 
+implement the automation of new tabs and windows
+digest authentication
